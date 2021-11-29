@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  key1: config1
+  companyCode: {{ .Values.costCode }}
+  projectCode: {{ lower .Values.projectCode }}
+  zone : {{ quote .Values.infra.zone  }}
+  region : {{ quote .Values.infra.region }}
+  now: {{ now | date "2006-01-02" | quote }}
+  pipeLine: {{ .Values.projectCode | upper | quote  }}
+  contact: {{ .Values.contact | default "9535579579" | quote }}
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-my-config

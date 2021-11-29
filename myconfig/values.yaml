@@ -1,0 +1,5 @@
+costCode: CodeWelt
+projectCode: CodeweltHelm
+infra: 
+  zone: a,b,c
+  region: us-east-1
